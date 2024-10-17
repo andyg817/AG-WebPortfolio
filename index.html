@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE-edge">
-    <meta name="viewport" content="width-devicewidth, initial scale=1.0">
+    <meta name="viewport" content="width-device-width, initial-scale=1.0">
     <title>Andrew Garcia Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./style.css">
     <script src="https://kit.fontawesome.com/0cd86f8564.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -54,6 +54,7 @@
                         <li><span>Software Development</span><br>-Java -Python -C++ -HTML/CSS -JS -MySQL -Assembly</li>
                         <li><span>Soft</span><br>-Scrum -Debugging -Collaberative Problem Solving -Research and Development</li>
                         <li><span>Areas</span><br>-Backend Development -Frontend Development</li>
+                        <li><span>Languages</span><br>-English -Spanish -Japanese</li>
                     </ul>
                 </div>
                 <div class="tab-contents" id="education">
@@ -98,13 +99,40 @@
             <div class="work">
                 <img src="Images/work-3.png">
                 <div class="layer">
-                    <h3>Coming soon</h3>
-                    <p></p>
+                    <h3>Weather Application</h3>
+                    <p>Online weather application with funtioning home and search functions using openWeatherMap API.</p>
+                    <a href="https://andyg817.github.io/Weather-App/"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="work-list hidden" id="more-work">
+            <div class="work">
+                <img src="Images/c-soon.png">
+                <div class="layer">
+                    <h3>Project 4</h3>
+                    <p>Coming Soon</p>
+                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="Images/c-soon.png">
+                <div class="layer">
+                    <h3>Project 5</h3>
+                    <p>Coming Soon</p>
+                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="Images/c-soon.png">
+                <div class="layer">
+                    <h3>Project 6</h3>
+                    <p>Coming Soon</p>
                     <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                 </div>
             </div>
         </div>
-        <a href="#" class="btn">See more</a>
+        <a href="#" id="see-more-btn" class="btn" onclick="showMore()">See more</a>
     </div>
 </div>
 
@@ -150,6 +178,22 @@
         event.currentTarget.classList.add("active-link");
         document.getElementById(tabname).classList.add("active-tab");
     }
+</script>
+<!--toggles visability-->
+<script>
+    const seeMoreBtn = document.getElementById('see-more-btn');
+    const moreWork = document.getElementById('more-work');
+
+    seeMoreBtn.addEventListener('click', function (e) {
+        e.preventDefault();
+        if (moreWork.classList.contains('hidden')) {
+            moreWork.classList.remove('hidden');
+            seeMoreBtn.innerText = 'See less';
+        } else {
+            moreWork.classList.add('hidden');
+            seeMoreBtn.innerText = 'See more';
+        }
+    });
 </script>
 <!--submitting to google sheets-->
 <script>
