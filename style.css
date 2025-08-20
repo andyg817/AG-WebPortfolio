@@ -287,6 +287,10 @@ nav ul li a:hover::after{
 /*small screens*/
 @media only screen and (max-width: 600px){
 
+    #header{
+        background-position: center;
+    }
+
     /* Container spacing */
     .container{
         padding: 20px;
@@ -305,21 +309,23 @@ nav ul li a:hover::after{
 
     /* Nav */
     nav{
-        flex-direction: column;
-        align-items: flex-start;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
     }
     nav ul{
-        margin-top: 10px;
-        width: 100%;
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
+        justify-content: wrap;
         gap: 10px;
+        margin-top: 0;
+        width: auto;
     }
     nav ul li{
-        margin: 0;
+        margin: 0 5px;
     }
     nav ul li a{
-        font-size: 16px;
+        font-size: 14px;
     }
 
     /* About section layout */
